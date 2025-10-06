@@ -3,6 +3,8 @@
 #include <cmath>
 #include <ctime>
 
+using namespace std;
+
 int getDigit(const int number);
 int sumOddDigits(const std::string cardNumber);
 int sumEvenDigits(const std::string cardNumber);
@@ -32,26 +34,26 @@ int main(){
         50 / 10 = 5 = Valid
     */
 
-    std::string cardNumber;
+    string cardNumber;
     int result = 0;
     char cont;
 
     do{
-    std::cout << "Enter a Credit Card Number: " << '\n';
-    std::cin >> cardNumber;
+    cout << "Enter a Credit Card Number: " << '\n';
+    cin >> cardNumber;
 
     result = sumEvenDigits(cardNumber) + sumOddDigits(cardNumber);
 
     if(result % 10 == 0){
-        std::cout << cardNumber << " is Valid!!!" << '\n';
-        std::cout << "Do you want to continue?(Y/N): " << '\n';
-        std::cin >> cont;
+        cout << cardNumber << " is Valid!!!" << '\n';
+        cout << "Do you want to continue?(Y/N): " << '\n';
+        cin >> cont;
         cont = toupper(cont);
     }
     else{
-        std::cout << cardNumber << " is not valid" << '\n';
-        std::cout << "Do you want to continue?(Y/N): " << '\n';
-        std::cin >> cont;
+        cout << cardNumber << " is not valid" << '\n';
+        cout << "Do you want to continue?(Y/N): " << '\n';
+        cin >> cont;
         cont = toupper(cont);
     }}while(cont == 'Y');
 
